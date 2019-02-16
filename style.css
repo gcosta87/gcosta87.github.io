@@ -52,12 +52,12 @@ a{
 }
 
 .section-2 h2{
-    font-size: 1.7rem;
+    font-size: 1rem;
     margin-bottom: 10px;
 }
 
 .section-2 p{
-    font-size: 1rem;
+    font-size: 0.8rem;
     padding-bottom: 10px;
     margin:0;
 }
@@ -71,7 +71,7 @@ a{
 }
 /* animations / utilities */
 .section-2 a:hover{
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
