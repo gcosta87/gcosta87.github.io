@@ -63,8 +63,6 @@ a{
 }
 
 .section-2 a{
-    display: block;
-    padding: 5px;
     font-size: 0.8rem;
     padding-left: 0;
     width: 100px;
