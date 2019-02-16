@@ -65,13 +65,13 @@ a{
 .section-2 a{
     display: block;
     padding: 5px;
-    font-size: 1.1rem;
+    font-size: 0.8rem;
     padding-left: 0;
     width: 100px;
 }
 /* animations / utilities */
 .section-2 a:hover{
-    font-size: 1rem;
+    font-size: 0.9rem;
     color: #fff;
     cursor: pointer;
     transition: 0.2s;
