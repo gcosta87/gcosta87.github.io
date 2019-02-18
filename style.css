@@ -101,39 +101,3 @@ a{
         padding-top: 2rem;
     }
 }
-
-/*animation*/
-.section-1 typing > *{
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typingAnim 5s steps(50);
-}
-.section-1 typing > *::after{
-  content: ". .";
-  display: block;
-  position: absolute;
-  top: 1em;
-  left: .35em;
-}
-.section-1 typing > *::before{
-  content: "";
-  position: absolute;
-  display: block;
-  top: 2.1em;
-  left: .25em;
-  width: 1em;
-  height: .1em;
-  border-radius: 100%;
-  background: #fff;
-  animation: typingSpeak .5s steps(2);
-  animation-iteration-count: 5;
-}
-@keyframes typingAnim{
-  from { width: 0 }
-  to { width: 100% }
-}
-@keyframes typingSpeak{
-  0% { width: 1em; height: .1em }
-  100% { width: 1em; height: .5em; }
-}
-
