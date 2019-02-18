@@ -103,19 +103,19 @@ a{
 }
 
 /*animation*/
-.typing > *{
+.section-1 typing > *{
   overflow: hidden;
   white-space: nowrap;
   animation: typingAnim 5s steps(50);
 }
-.typing > *::after{
+.section-1 typing > *::after{
   content: ". .";
   display: block;
   position: absolute;
   top: 1em;
   left: .35em;
 }
-.typing > *::before{
+.section-1 typing > *::before{
   content: "";
   position: absolute;
   display: block;
