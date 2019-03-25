@@ -104,20 +104,19 @@ a{
 
 
 
-
 /* typewriter */
 
-t {
+.section-1 t{
   border-right: solid 3px rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;    
-  font-family: 'Roboto Mono', sans-serif;
+  font-family: 'Source Code Pro', monospace;  
   font-size: 28px;
   color: rgba(255,255,255,.70);
 }
 
 /* Animation */
-t {
+.section-1 t{
   animation: animated-text 4s steps(29) 1s 1 normal both,
              animated-cursor 600ms steps(29) infinite;
 }
