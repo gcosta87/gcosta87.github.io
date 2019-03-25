@@ -109,10 +109,9 @@ a{
 .section-1 t{
   border-right: solid 3px rgba(0,255,0,.75);
   white-space: nowrap;
-  overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
-  font-size: 28px;
-  color: rgba(255,255,255,.70);
+  overflow: hidden;
+  font-size: 1.6rem;
+  margin-bottom: 10px;
 }
 
 /* Animation */
