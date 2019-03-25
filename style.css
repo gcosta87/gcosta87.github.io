@@ -106,18 +106,12 @@ a{
 
 
 /* typewriter */
-@import @import url('https://fonts.googleapis.com/css?family=Source+Code+Pro');
-
-body{
-  padding: 40px;
-  background-color: #121212;  
-}
 
 t {
   border-right: solid 3px rgba(0,255,0,.75);
   white-space: nowrap;
   overflow: hidden;    
-  font-family: 'Source Code Pro', monospace;  
+  font-family: 'Roboto Mono', sans-serif;
   font-size: 28px;
   color: rgba(255,255,255,.70);
 }
