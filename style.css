@@ -101,35 +101,3 @@ a{
         padding-top: 2rem;
     }
 }
-
-
-
-/* typewriter */
-
-.section-1 t{
-  border-right: solid 3px rgba(0,255,0,.75);
-  white-space: nowrap;
-  overflow: hidden;
-  font-size: 1.6rem;
-  margin-bottom: 10px;
-}
-
-/* Animation */
-.section-1 t{
-  animation: animated-text 4s steps(29) 1s 1 normal both,
-             animated-cursor 600ms steps(29) infinite;
-}
-
-/* text animation */
-
-@keyframes animated-text{
-  from{width: 0;}
-  to{width: 472px;}
-}
-
-/* cursor animations */
-
-@keyframes animated-cursor{
-  from{border-right-color: rgba(0,255,0,.75);}
-  to{border-right-color: transparent;}
-}
