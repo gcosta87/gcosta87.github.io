@@ -11,4 +11,4 @@ var typeText = setInterval(function () {
     if (i >= textCount) {
         clearInterval(typeText);
     }
-}, 40);  //200ms.  This can be lowered to type faster.
+}, 20);  //200ms.  This can be lowered to type faster.
