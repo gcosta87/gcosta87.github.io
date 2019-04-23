@@ -11,4 +11,4 @@ var typeText = setInterval(function () {
     if (i >= textCount) {
         clearInterval(typeText);
     }
-}, 300);
+}, 400);
