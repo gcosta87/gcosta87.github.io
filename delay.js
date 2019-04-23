@@ -11,7 +11,7 @@ var typeText = setTimeout(setInterval(function () {
     if (i >= textCount) {
         clearInterval(typeText);
     }
-}, 200),1000);
+}, 200),500);
 
 
 /*
