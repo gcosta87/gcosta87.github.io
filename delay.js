@@ -11,7 +11,7 @@ var typeTextDelay = setInterval(function () {
     if (i >= textCountDelay) {
         clearInterval(typeTextDelay);
     }
-}, 200);
+}, 1000);
 
 
 /*
