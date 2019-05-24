@@ -28,6 +28,7 @@ a{
     padding-top: 40vh;
     padding-left: 20vw;
     text-align: center;
+    vertical-align: middle; /* can comment out */
 }
 
 .section-1 p{
@@ -49,6 +50,7 @@ a{
 .section-2{
     padding-top: 20vh;
     width: 70%;
+    vertical-align: middle; /* can comment out */
 }
 
 .section-2 h2{
