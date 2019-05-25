@@ -25,7 +25,8 @@ a{
 }
 /* section 1 */
 .section-1{
-    position: fixed;
+    /*position: fixed;*/
+    position: sticky;
     padding-top: 40vh;
     padding-left: 20vw;
     text-align: center;
