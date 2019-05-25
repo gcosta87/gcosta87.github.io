@@ -47,9 +47,8 @@ a{
 }
 /* section 2 */
 .section-2{
-    overflow-y: scroll;
+    /*overflow-y: scroll;*/
     padding-top: 20vh;
-    padding-bottom: 20vh;
     width: 70%;
 }
 
