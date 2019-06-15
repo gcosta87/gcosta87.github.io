@@ -25,8 +25,8 @@ a{
 }
 /* section 1 */
 .section-1{
-    margin: auto
-    /*padding-top: 40vh;*/
+    padding-top: 40vh;
+    padding-bottom: 40vh;
     padding-left: 20vw;
     text-align: center;
 }
@@ -48,9 +48,8 @@ a{
 }
 /* section 2 */
 .section-2{
-    margin: auto
-    /*padding-top: 25vh;
-    padding-bottom: 25vh;*/
+    padding-top: 25vh;
+    padding-bottom: 25vh;
     width: 70%;
 }
 
