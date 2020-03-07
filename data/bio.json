@@ -1,4 +1,31 @@
 {
+  "name":     "Gonzalo Gabriel",
+  "last_name":"Costa",
+  "birthday": "1987-01-14",
 
+  "slogan":       "Programador, simple y humano!",
+  "description":  "",
+
+  "country_flag_url": "assets/images/flag.svg",
+  "location":         "La Plata, Argentina",
+
+  "job": {
+      "company": {
+        "website":"https://www.freelogic.com.ar",
+        "logo":   "https://www.freelogic.com.ar/images/freelogic_icon.png"
+      },
+    "role": "Programador / QA"
+  },
+
+  "links": {
+    "mail":       "gcosta@freelogic.com.ar",
+
+    "github":"https://github.com/gcosta87/",
+    "gitlab":"https://gitlab.com/gcosta87",
+
+    "linkedin":"",
+
+    "enable_cv":  false
+  }
 
 }

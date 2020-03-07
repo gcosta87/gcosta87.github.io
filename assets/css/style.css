@@ -16,16 +16,33 @@ body{
 
 }
 main{
-    height: 100vh;
+    height: 94vh;
     align-items: center;
     display: flex;
     justify-content: center;
     position: relative;
 }
 
+footer{
+    height: 6vh;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+footer img {
+    width: 1em;
+    opacity: 0.6;
+    transition: width 1s, opacity 2s;
+}
+
+footer img:hover{
+    width: 1.8em;
+    opacity: 1;
+}
+
 /* Under Construction */
-main #under_construction_section{
-    display: none;
+body.mode_underconstruction main #under_construction_section{
     font-size: 2em;
     text-align: center;
 }
@@ -48,6 +65,13 @@ main #under_construction_section i,main #under_construction_section  span{
 }
 
 
+/*All fields thar are inyected/filled are initialy non visible*/
+.fill_field{
+    display: none;
+}
+
+
+
 h2,.white{
     color: #fff;
 }
@@ -56,10 +80,15 @@ a{
     color: #7A7C80;
     text-decoration: none;
 }
+
+body.mode_underconstruction .section-1,body.mode_underconstruction .section-2{
+    display: none;
+}
+
+
 /* section 1 */
 .section-1{
     padding-top: 35vh;
-    /*padding-bottom: 40vh;*/
     padding-left: 20vw;
     text-align: center;
 }
@@ -79,10 +108,22 @@ a{
     font-size: 1.4rem;
     padding: 10px;
 }
+
+.section-1 #image_me{
+    width: 8em;
+    border-radius: 50%;
+    filter: grayscale(40%);
+    transition: filter 1s;
+}
+
+.section-1 #image_me:hover{
+    filter: none;
+}
+
+
 /* section 2 */
 .section-2{
     padding-top: 25vh;
-    /*padding-bottom: 25vh;*/
     width: 70%;
 }
 

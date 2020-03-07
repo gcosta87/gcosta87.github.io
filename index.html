@@ -7,57 +7,107 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css" integrity="sha384-5sAR7xN1Nv6T6+dT2mhtzEpVJvfS3NScPQTrOxhwjIuvcA67KV2R5Jz6kr4abQsz" crossorigin="anonymous">
-    <title></title>
     <!-- Required config of site -->
     <script src="config.js"></script>
 </head>
-<body>
+<body class="">
     <main>
         <div id="under_construction_section">
-            <i class=""></i>
-            <span class="header"></span>
-            <span class="description"></span>
-        </div>
-<!-- TODO replace fixed data with JSON files
-    <div class="grid-2">
-        <div class="section-1">
-            <img src="assets/me.png" alt="Me" id="image_me">
-            <h2 id="typewriter">Full Name</h2>
-            <p>City, Country</p>
-            <a href="download/cv.pdf" target="blank"><i class="fas fa-file-pdf"></i></a>
-            <a href="#" target="blank"><i class="fab fa-linkedin"></i></a>
-            <a href="mailto:#"><i class="far fa-envelope"></i></a>
+            <i class="fill_field"></i>
+            <span class="header fill_field"></span>
+            <span class="description fill_field"></span>
         </div>
 
-        <div class="section-2">
-            <h2>Hi there!</h2>
-            <p></p>
+        <div class="grid-2">
+            <div class="section-1">
+                <a href="assets/me.png" target="_blank"><img src="assets/me.png" alt="Me" id="image_me"/></a>
+                <h2><span class="fill_field last_name">Full</span>, <span class="fill_field name">Name</span></h2>
+                <p><img src="" id="country_flag" /> <span class="fill_field location"></span></p>
+                <p class="fill_field slogan"></p>
+                <p class="fill_field description"></p>
 
-            <h2>Education</h2>
-            <p></p>
+                <a href="mailto:#" class="fill_field mail"><i class="far fa-envelope"></i></a>
+                <a href="download/cv.pdf" target="_blank" class="fill_field cv" ><i class="fas fa-file-pdf"></i></a>
+                <a href="#" target="blank" src="" class="fill_field linkeding"><i class="fab fa-linkedin"></i></a>
 
-            <h2>Working On</h2>
-            <p></p>
+                <a href="#" target="blank" src="" class="fill_field github"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field gitlab"><i class="fab fa-linkedin"></i></a>
 
-            <h2>Teaching</h2>
-            <p></p>
-            <br/>
-            <p><font size="1">Last Updated Sep 19.</font></p>
+                <a href="#" target="blank" src="" class="fill_field youtube"><i class="fab fa-linkedin"></i></a>
+
+                <a href="#" target="blank" src="" class="fill_field instagram"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field facebook"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field twitter"><i class="fab fa-linkedin"></i></a>
+            </div>
+
+            <div class="section-2">
+                <h2>Hi there!</h2>
+                <p></p>
+
+                <h2>Education</h2>
+                <p></p>
+
+                <h2>Working On</h2>
+                <p></p>
+
+                <h2>Teaching</h2>
+                <p></p>
+                <br/>
+                <p><font size="1">Last Updated Sep 19.</font></p>
+            </div>
         </div>
-    </div>
-    -->
+
     </main>
+    <footer>
+        <img class="logo" src="assets/images/flag_footer.svg" alt="hecho en Argentina" title="Hecho en Argentina"/>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
     <script>
-        if(config.under_construction.active){
+        /**
+         * Completa el campo y lo hace visible, al sacarle la clase .fill_field
+         * @param $parent jQuery Object del padre contenedor
+         * @param field  string, representando el "child"
+         * @param value string
+         */
+        function fillField($parent, field, value){
+            var $child = $parent.find(field);
+            $child.text(value);
+            $child.toggleClass('fill_field');
+        }
+
+
+        function fillFields($parent, fields_values){
+           for (var field in fields_values){
+                fillField($parent,field, fields_values[field]);
+           }
+        }
+
+        function fillFontAwasomeIcon($parent, field, iconClass) {
+            var $child = $parent.find(field);
+            $child.addClass(iconClass);
+            $child.toggleClass('fill_field');
+        }
+
+        if(config.under_construction.enable){
             var $section = $('#under_construction_section');
             //Loads the message and icon
-            $section.find('i').addClass(config.under_construction.fa_icon_class);
-            $section.find('span.header').text(config.under_construction.header);
-            $section.find('span.description').text(config.under_construction.description);
-            $section.show();
+            var underConstructionFileds = {
+                'span.header': config.under_construction.header,
+                'span.description': config.under_construction.description,
+            };
+
+            fillFields($section, underConstructionFileds);
+            fillFontAwasomeIcon($section,'i',config.under_construction.fa_icon_class);
+            $('body').addClass('mode_underconstruction');
+        }
+        else{
+            //fetch JSONs files, and fill all fields
+            fetch('data/bio.json')
+                .then(function(response) {
+                    var bio = response.json();
+                    console.log(bio);
+                })
         }
     </script>
-<!--    <script src="assets/js/typewriter.js"></script>  -->
 </body>
 </html>
