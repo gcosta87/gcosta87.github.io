@@ -4,8 +4,8 @@ const config = {
      * Define if the site/porfolio is "under construction"
      */
     under_construction: {
-        //boolean value. true: visible, false: dishable
-        enable:     true,
+        //boolean value. true: visible, false: disabled
+        enabled:     true,
 
         fa_icon_class:  'fas fa-laptop-code',
 

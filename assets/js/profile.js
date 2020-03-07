@@ -58,8 +58,68 @@ function calculateAge(birthday) {
     return Math.abs(ageDate.getUTCFullYear() - 1970);
 }
 
+/**
+ * Fill all the Bio's fields
+ */
+function fillBioFields(bio) {
+
+    $sectionBio = $('.section-1');
+    var bioFileds = {
+        '.last_name': bio.last_name,
+        '.name': bio.name,
+        '.age': calculateAge(bio.birthday),
+
+        '.brief': bio.brief,
+        '.description': bio.description,
+
+        '.location': bio.location,
+
+        '.company_name': bio.job.company.name,
+        '.role': bio.job.role,
+    };
+
+    //Set the images and link
+    $('img#country_flag').prop('src', bio.country_flag_url);
+    $('img#company_logo').prop('src', bio.job.company.logo);
+
+    $('a#company_website').prop('href', bio.job.company.website);
+
+    fillFields($sectionBio,bioFileds);
+
+    // Load the links
+    fillBioLink('a.mail','mailto:'+bio.links.mail);
+    fillBioLink('a.web',bio.links.web);
+    fillBioLink('a.linkedin',bio.links.linkedin);
+    fillBioLink('a.github',bio.links.github);
+    fillBioLink('a.gitlab',bio.links.gitlab);
+    fillBioLink('a.youtube',bio.links.youtube);
+
+    if(bio.links.enable_cv){
+        //enable the link
+
+        var $cv_link =  $('a.cv');
+        $cv_link.prop('href','download/cv.pdf');
+        $cv_link.toggleClass('fill_field');
+    }
+}
+
+/**
+ * Fill all the CV's fields
+ */
+function fillCVFields(cv) {
+    $CVSection = $('.section-2');
+    fillField($CVSection,'.interests',cv.interests)
+
+    var $skillsContainer = $('p.skills');
+    for (var item in cv.skills){
+        var skill = cv.skills[item];
+        $skillsContainer.append('<i class="'+skill.fa_logo+'" title="'+skill.title+' '+skill.level+'" style="opacity: '+skill.level+';"></i>');
+    }
+
+    $skillsContainer.toggleClass('fill_field');
+}
 function initProfile() {
-    if (config.under_construction.enable) {
+    if (config.under_construction.enabled) {
         initUnderConstructionMode();
     } else {
         $('body').addClass('mode_profile');
@@ -73,36 +133,18 @@ function initProfile() {
                 //set the web's title
                 document.title= bio.name+' '+bio.last_name;
 
-                //fill all the fields
-                $sectionBio = $('.section-1');
-                var bioFileds = {
-                    '.last_name': bio.last_name,
-                    '.name': bio.name,
-                    '.age': calculateAge(bio.birthday),
+                //Fill fields
+                fillBioFields(bio);
+            });
 
-                    '.brief': bio.brief,
-                    '.description': bio.description,
 
-                    '.location': bio.location,
-
-                    '.company_name': bio.job.company.name,
-                    '.role': bio.job.role,
-                };
-
-                //Set the images and link
-                $('img#country_flag').prop('src', bio.country_flag_url);
-                $('img#company_logo').prop('src', bio.job.company.logo);
-
-                $('a#company_website').prop('href', bio.job.company.website);
-
-                fillFields($sectionBio,bioFileds);
-
-                // Load the links
-                fillBioLink('a.mail','mailto:"'+bio.links.mail);
-                fillBioLink('a.web',bio.links.web);
-                fillBioLink('a.linkedin',bio.links.linkedin);
-                fillBioLink('a.github',bio.links.github);
-                fillBioLink('a.gitlab',bio.links.gitlab);
-        });
+        fetch('data/cv.json')
+            .then(function (response) {
+                return response.json();
+            })
+            .then(function(cv) {
+                //Fill all the CV's fields
+                fillCVFields(cv);
+            });
     }
 }

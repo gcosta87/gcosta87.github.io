@@ -1,34 +1,82 @@
 {
-  "interests": "",
+  "interests": "Me interesa la tecnología, el software libre y ciertos aspectos humanos",
   "skills": {
     "android": {
-      "fa-logo": "",
-      "title": "",
-      "level": "10%"
+      "fa_logo": "fab fa-android",
+      "title": "Android",
+      "level": "30%"
     },
 
     "php": {
-      "fa-logo": "",
-      "title": "",
-      "level": "10%"
+      "fa_logo": "fab fa-php",
+      "title": "PHP",
+      "level": "50%"
+    },
+
+    "laravel": {
+      "fa_logo": "fab fa-laravel",
+      "title": "Laravel",
+      "level": "50%"
+    },
+
+    "symfony": {
+      "fa_logo": "fab fa-symfony",
+      "title": "Symfony",
+      "level": "50%"
     },
 
     "bash": {
-      "fa-logo": "",
-      "title": "",
-      "level": "10%"
+      "fa_logo": "fa fa-terminal",
+      "title": "Bash / Bashscripts",
+      "level": "60%"
     },
 
     "linux": {
-      "fa-logo": "",
+      "fa_logo": "fab fa-linux",
       "title": "",
-      "level": "10%"
+      "level": "50%"
+    },
+
+    "sql": {
+      "fa_logo": "fas fa-database",
+      "title": "SQL (MySQL)",
+      "level": "50%"
+    },
+
+    "js": {
+      "fa_logo": "fab fa-js",
+      "title": "Javascript",
+      "level": "50%"
+    },
+
+    "html": {
+      "fa_logo": "fab fa-html5",
+      "title": "HTML",
+      "level": "60%"
+    },
+
+    "css": {
+      "fa_logo": "fab fa-css3",
+      "title": "CSS",
+      "level": "50%"
+    },
+
+    "java": {
+      "fa_logo": "fab fa-java",
+      "title": "",
+      "level": "50%"
     },
 
     "office": {
-      "fa-logo": "",
-      "title": "",
-      "level": "10%"
+      "fa_logo": "fas fa-file-word",
+      "title": "Ofimatica",
+      "level": "30%"
+    },
+
+    "raspberry": {
+      "fa_logo": "fab fa-raspberry-pi",
+      "title":  "Raspberry Pi",
+      "level":  "20%"
     }
   },
 

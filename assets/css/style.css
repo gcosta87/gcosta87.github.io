@@ -113,8 +113,17 @@ body.mode_profile #under_construction_section{
 .section-1 .brief,.section-1 .description {
     font-size: 0.9em;
     letter-spacing: 1px;
-    color: #ccc;
 }
+
+.section-1 .description{
+    color: #ccc;
+    font-size: 1em;
+}
+
+.section-1 .brief{
+    color: #aec6f4;
+}
+
 .section-1 a#company_website{
     font-size: 1em;
 }
@@ -124,7 +133,7 @@ body.mode_profile #under_construction_section{
 }
 .section-1 h2{
     font-size: 1.6rem;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 .section-1 a{
@@ -160,6 +169,12 @@ body.mode_profile #under_construction_section{
     font-size: 0.8rem;
     padding-bottom: 10px;
     margin:0;
+}
+
+.section-2 .skills i{
+    color: white;
+    margin: 0.6em;
+    font-size: 1.8em;
 }
 
 .section-2 a{
