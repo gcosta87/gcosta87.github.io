@@ -3,22 +3,25 @@
   "last_name":"Costa",
   "birthday": "1987-01-14",
 
-  "slogan":       "Programador, simple y humano!",
-  "description":  "",
+  "brief":       "programador, simple y humano!",
+  "description":  "Me interesa la tecnología, el software libre y ciertos aspectos humanos. Disfruto de la música. Toco un poco el legüero. Me gusta ser algo entusiasta con los temas que me interesan. No uso mucho las redes sociales. Amo a mi país \uD83C\uDDE6\uD83C\uDDF7.",
 
   "country_flag_url": "assets/images/flag.svg",
   "location":         "La Plata, Argentina",
 
   "job": {
       "company": {
+        "name":   "freelogic",
         "website":"https://www.freelogic.com.ar",
         "logo":   "https://www.freelogic.com.ar/images/freelogic_icon.png"
       },
-    "role": "Programador / QA"
+    "role": "programador / qa"
   },
+
 
   "links": {
     "mail":       "gcosta@freelogic.com.ar",
+    "web":       "",
 
     "github":"https://github.com/gcosta87/",
     "gitlab":"https://gitlab.com/gcosta87",

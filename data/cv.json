@@ -1,3 +1,38 @@
 {
+  "interests": "",
+  "skills": {
+    "android": {
+      "fa-logo": "",
+      "title": "",
+      "level": "10%"
+    },
 
+    "php": {
+      "fa-logo": "",
+      "title": "",
+      "level": "10%"
+    },
+
+    "bash": {
+      "fa-logo": "",
+      "title": "",
+      "level": "10%"
+    },
+
+    "linux": {
+      "fa-logo": "",
+      "title": "",
+      "level": "10%"
+    },
+
+    "office": {
+      "fa-logo": "",
+      "title": "",
+      "level": "10%"
+    }
+  },
+
+  "sections": {
+
+  }
 }

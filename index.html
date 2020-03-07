@@ -10,7 +10,7 @@
     <!-- Required config of site -->
     <script src="config.js"></script>
 </head>
-<body class="">
+<body class="" onload="initProfile();">
     <main>
         <div id="under_construction_section">
             <i class="fill_field"></i>
@@ -21,23 +21,30 @@
         <div class="grid-2">
             <div class="section-1">
                 <a href="assets/me.png" target="_blank"><img src="assets/me.png" alt="Me" id="image_me"/></a>
-                <h2><span class="fill_field last_name">Full</span>, <span class="fill_field name">Name</span></h2>
+                <p class="fill_field brief"></p>
+
+                <h2><span class="fill_field last_name">Full</span>, <span class="fill_field name">Name</span> (<span class="fill_field age"></span>)</h2>
+
                 <p><img src="" id="country_flag" /> <span class="fill_field location"></span></p>
-                <p class="fill_field slogan"></p>
+                <p><i class="fa fa-building"></i> <span class="fill_field role"></span> @<a href="#" target="_blank" id="company_website"><img src="" id="company_logo" /> <span class="fill_field company_name"></span></a> </p>
+
+                <!-- -->
                 <p class="fill_field description"></p>
 
-                <a href="mailto:#" class="fill_field mail"><i class="far fa-envelope"></i></a>
+                <!-- Links -->
+                <a href="" class="fill_field mail"><i class="far fa-envelope"></i></a>
+                <a href="mailto:#" class="fill_field web"><i class="fas fa-link"></i></a>
                 <a href="download/cv.pdf" target="_blank" class="fill_field cv" ><i class="fas fa-file-pdf"></i></a>
-                <a href="#" target="blank" src="" class="fill_field linkeding"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field linkedin"><i class="fab fa-linkedin"></i></a>
 
-                <a href="#" target="blank" src="" class="fill_field github"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="blank" src="" class="fill_field gitlab"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field github"><i class="fab fa-github"></i></a>
+                <a href="#" target="blank" src="" class="fill_field gitlab"><i class="fab fa-gitlab"></i></a>
 
-                <a href="#" target="blank" src="" class="fill_field youtube"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field youtube"><i class="fab fa-youtube"></i></a>
 
-                <a href="#" target="blank" src="" class="fill_field instagram"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="blank" src="" class="fill_field facebook"><i class="fab fa-linkedin"></i></a>
-                <a href="#" target="blank" src="" class="fill_field twitter"><i class="fab fa-linkedin"></i></a>
+                <a href="#" target="blank" src="" class="fill_field instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" target="blank" src="" class="fill_field facebook"><i class="fab fa-facebook"></i></a>
+                <a href="#" target="blank" src="" class="fill_field twitter"><i class="fab fa-twitter"></i></a>
             </div>
 
             <div class="section-2">
@@ -62,52 +69,6 @@
         <img class="logo" src="assets/images/flag_footer.svg" alt="hecho en Argentina" title="Hecho en Argentina"/>
     </footer>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha256-pasqAKBDmFT4eHoN2ndd6lN370kFiGUFyTiUHWhU7k8=" crossorigin="anonymous"></script>
-    <script>
-        /**
-         * Completa el campo y lo hace visible, al sacarle la clase .fill_field
-         * @param $parent jQuery Object del padre contenedor
-         * @param field  string, representando el "child"
-         * @param value string
-         */
-        function fillField($parent, field, value){
-            var $child = $parent.find(field);
-            $child.text(value);
-            $child.toggleClass('fill_field');
-        }
-
-
-        function fillFields($parent, fields_values){
-           for (var field in fields_values){
-                fillField($parent,field, fields_values[field]);
-           }
-        }
-
-        function fillFontAwasomeIcon($parent, field, iconClass) {
-            var $child = $parent.find(field);
-            $child.addClass(iconClass);
-            $child.toggleClass('fill_field');
-        }
-
-        if(config.under_construction.enable){
-            var $section = $('#under_construction_section');
-            //Loads the message and icon
-            var underConstructionFileds = {
-                'span.header': config.under_construction.header,
-                'span.description': config.under_construction.description,
-            };
-
-            fillFields($section, underConstructionFileds);
-            fillFontAwasomeIcon($section,'i',config.under_construction.fa_icon_class);
-            $('body').addClass('mode_underconstruction');
-        }
-        else{
-            //fetch JSONs files, and fill all fields
-            fetch('data/bio.json')
-                .then(function(response) {
-                    var bio = response.json();
-                    console.log(bio);
-                })
-        }
-    </script>
+    <script src="assets/js/profile.js"></script>
 </body>
 </html>

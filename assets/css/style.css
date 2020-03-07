@@ -85,20 +85,43 @@ body.mode_underconstruction .section-1,body.mode_underconstruction .section-2{
     display: none;
 }
 
+body.mode_profile #under_construction_section{
+    display: none;
+}
 
 /* section 1 */
 .section-1{
-    padding-top: 35vh;
+    padding-top: 10vh;
     padding-left: 20vw;
     text-align: center;
+    //border: 1px solid white; //eliminar
 }
 
 .section-1 p{
     font-size: 1rem;
-    padding-bottom: 10px;
+    padding-bottom: 5px;
     margin:0;
 }
 
+.section-1 .last_name{
+    font-weight: bold;
+}
+.section-1 img#country_flag, .section-1 img#company_logo{
+    width: 1.2em;
+}
+
+.section-1 .brief,.section-1 .description {
+    font-size: 0.9em;
+    letter-spacing: 1px;
+    color: #ccc;
+}
+.section-1 a#company_website{
+    font-size: 1em;
+}
+.section-1 .description{
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
 .section-1 h2{
     font-size: 1.6rem;
     margin-bottom: 10px;
@@ -123,8 +146,9 @@ body.mode_underconstruction .section-1,body.mode_underconstruction .section-2{
 
 /* section 2 */
 .section-2{
-    padding-top: 25vh;
+    padding-top: 10vh;
     width: 70%;
+    //border: 1px solid green;        //Eliminar
 }
 
 .section-2 h2{
