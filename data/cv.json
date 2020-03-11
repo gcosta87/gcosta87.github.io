@@ -4,79 +4,79 @@
     "android": {
       "fa_logo": "fab fa-android",
       "title": "Android",
-      "level": "30%"
+      "level": "3"
     },
 
     "php": {
       "fa_logo": "fab fa-php",
       "title": "PHP",
-      "level": "50%"
+      "level": "5"
     },
 
     "laravel": {
       "fa_logo": "fab fa-laravel",
       "title": "Laravel",
-      "level": "50%"
+      "level": "5"
     },
 
     "symfony": {
       "fa_logo": "fab fa-symfony",
       "title": "Symfony",
-      "level": "50%"
+      "level": "5"
     },
 
     "bash": {
       "fa_logo": "fa fa-terminal",
       "title": "Bash / Bashscripts",
-      "level": "60%"
+      "level": "6"
     },
 
     "linux": {
       "fa_logo": "fab fa-linux",
       "title": "",
-      "level": "50%"
+      "level": "5"
     },
 
     "sql": {
       "fa_logo": "fas fa-database",
       "title": "SQL (MySQL)",
-      "level": "50%"
+      "level": "5"
     },
 
     "js": {
       "fa_logo": "fab fa-js",
       "title": "Javascript",
-      "level": "50%"
+      "level": "5"
     },
 
     "html": {
       "fa_logo": "fab fa-html5",
       "title": "HTML",
-      "level": "60%"
+      "level": "6"
     },
 
     "css": {
       "fa_logo": "fab fa-css3",
       "title": "CSS",
-      "level": "50%"
+      "level": "5"
     },
 
     "java": {
       "fa_logo": "fab fa-java",
       "title": "",
-      "level": "50%"
+      "level": "5"
     },
 
     "office": {
       "fa_logo": "fas fa-file-word",
       "title": "Ofimatica",
-      "level": "30%"
+      "level": "3"
     },
 
     "raspberry": {
       "fa_logo": "fab fa-raspberry-pi",
       "title":  "Raspberry Pi",
-      "level":  "20%"
+      "level":  "2"
     }
   },
 

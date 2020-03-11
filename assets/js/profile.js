@@ -20,6 +20,14 @@ function fillFields($parent, fields_values){
     }
 }
 
+function fillTitleField($parent, field, value){
+    if(value) {
+        var $child = $parent.find(field);
+        $child.prop('title',value);
+        $child.toggleClass('fill_field');
+    }
+}
+
 function fillFontAwasomeIcon($parent, field, iconClass) {
     var $child = $parent.find(field);
     $child.addClass(iconClass);
@@ -48,7 +56,7 @@ function initUnderConstructionMode() {
 
     fillFields($section, underConstructionFileds);
     fillFontAwasomeIcon($section, 'i', config.under_construction.fa_icon_class);
-    $('body').addClass('mode_underconstruction');
+    $('body').toggleClass('mode_underconstruction');
 }
 
 
@@ -85,13 +93,19 @@ function fillBioFields(bio) {
     $('a#company_website').prop('href', bio.job.company.website);
 
     fillFields($sectionBio,bioFileds);
+    fillTitleField($sectionBio,'.last_update','Ultima actualización '+bio.last_update)
 
     // Load the links
-    fillBioLink('a.mail','mailto:'+bio.links.mail);
+    console.log(bio.links)
+    fillBioLink('a.mail','mailto:'+ bio.links.mail.replace('[AT]','@'));
+    fillBioLink('a.telegram','https://t.me/'+ bio.links.telegram_username);
+
     fillBioLink('a.web',bio.links.web);
     fillBioLink('a.linkedin',bio.links.linkedin);
-    fillBioLink('a.github',bio.links.github);
-    fillBioLink('a.gitlab',bio.links.gitlab);
+
+    fillBioLink('a.github','https://github.com/'+bio.links.github_username);
+    fillBioLink('a.gitlab','https://gitlab.com/'+bio.links.gitlab_username);
+
     fillBioLink('a.youtube',bio.links.youtube);
 
     if(bio.links.enable_cv){
@@ -113,7 +127,7 @@ function fillCVFields(cv) {
     var $skillsContainer = $('p.skills');
     for (var item in cv.skills){
         var skill = cv.skills[item];
-        $skillsContainer.append('<i class="'+skill.fa_logo+'" title="'+skill.title+' '+skill.level+'" style="opacity: '+skill.level+';"></i>');
+        $skillsContainer.append('<i class="'+skill.fa_logo+' skill_level_'+skill.level+'" title="'+skill.title+' '+skill.level+'/10" style="opacity: '+skill.level+'0%;"></i>');
     }
 
     $skillsContainer.toggleClass('fill_field');
@@ -122,6 +136,7 @@ function initProfile() {
     if (config.under_construction.enabled) {
         initUnderConstructionMode();
     } else {
+        $('body').toggleClass('mode_underconstruction');
         $('body').addClass('mode_profile');
 
         //fetch JSONs files, and fill all fields
