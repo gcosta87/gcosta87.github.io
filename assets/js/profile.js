@@ -56,7 +56,6 @@ function initUnderConstructionMode() {
 
     fillFields($section, underConstructionFileds);
     fillFontAwasomeIcon($section, 'i', config.under_construction.fa_icon_class);
-    $('body').toggleClass('mode_underconstruction');
 }
 
 
