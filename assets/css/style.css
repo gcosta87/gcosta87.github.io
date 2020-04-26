@@ -16,7 +16,7 @@ body{
 
 }
 main{
-    height: 94vh;
+    height: auto;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -232,9 +232,6 @@ Skills levels
 
 /* media queres */
 @media(max-width:780px){
-    main{
-        height: auto;
-    }
     .grid-2{
         grid-template-columns: 1fr;
     }
