@@ -178,26 +178,32 @@ body.mode_profile #under_construction_section{
 /*
 Skills levels
 */
+.section-2 .skills{
+ padding: 0.8em;
+}
 .section-2 .skills i{
     color: white;
     margin: 0.6em;
 }
 
-.section-1 .skills i.skill_level_1,.section-1 .skills i.skill_level_2,.section-1 .skills i.skill_level_3 {
-    font-size: 1.4em;
+.section-2 .skills i.skill_level_1,.section-2 .skills i.skill_level_2 {
+    font-size: 1.2rem;
 }
 
-
-.section-1 .skills i.skill_level_4,.section-1 .skills i.skill_level_5,.section-1 .skills i.skill_level_6 {
-    font-size: 1.8em;
+.section-2 .skills i.skill_level_3, .section-2 .skills i.skill_level_4{
+    font-size: 1.8rem;
 }
 
-.section-1 .skills i.skill_level_7,.section-1 .skills i.skill_level_8 {
-    font-size: 2em;
+.section-2 .skills i.skill_level_5,.section-2 .skills i.skill_level_6 {
+    font-size: 2.5rem;
 }
 
-.section-1 .skills i.skill_level_9,.section-1 .skills i.skill_level_10 {
-    font-size: 2.2em;
+.section-2 .skills i.skill_level_7,.section-2 .skills i.skill_level_8 {
+    font-size: 3rem;
+}
+
+.section-2 .skills i.skill_level_9,.section-2 .skills i.skill_level_10 {
+    font-size: 3.6rem;
 }
 
 .section-2 a{
@@ -226,6 +232,9 @@ Skills levels
 
 /* media queres */
 @media(max-width:780px){
+    main{
+        height: auto;
+    }
     .grid-2{
         grid-template-columns: 1fr;
     }

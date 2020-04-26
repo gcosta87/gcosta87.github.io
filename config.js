@@ -5,7 +5,7 @@ const config = {
      */
     under_construction: {
         //boolean value. true: visible, false: disabled
-        enabled:     true,
+        enabled:     false,
 
         fa_icon_class:  'fas fa-laptop-code',
 

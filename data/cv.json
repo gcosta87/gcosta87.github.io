@@ -1,5 +1,5 @@
 {
-  "interests": "Me interesa la tecnología, el software libre y ciertos aspectos humanos",
+  "interests": "El desarollo de sistemas y el software libre con fines sociales son mis principales intereses. Tengo intenciones de aprender (algún día) sobre Business Intelligence y/o procesamiento de datos para su análisis y visualización, o bien sobre QA, por cuestiones laborales. Me interesan otras temáticas como las finanzas personales o algunos aspectos del Agro (apicultura p. ej.).",
   "skills": {
     "android": {
       "fa_logo": "fab fa-android",
@@ -10,7 +10,7 @@
     "php": {
       "fa_logo": "fab fa-php",
       "title": "PHP",
-      "level": "5"
+      "level": "7"
     },
 
     "laravel": {
@@ -40,12 +40,12 @@
     "sql": {
       "fa_logo": "fas fa-database",
       "title": "SQL (MySQL)",
-      "level": "5"
+      "level": "6"
     },
 
     "js": {
       "fa_logo": "fab fa-js",
-      "title": "Javascript",
+      "title": "Javascript / jQuery",
       "level": "5"
     },
 
@@ -77,6 +77,18 @@
       "fa_logo": "fab fa-raspberry-pi",
       "title":  "Raspberry Pi",
       "level":  "2"
+    },
+
+    "text-processing": {
+      "fa_logo": "fas fa-file-alt",
+      "title":  "Procesamiento de texto (RegEx, OpenRefine,...)",
+      "level":  "6"
+    },
+
+    "markdown": {
+      "fa_logo": "fab fa-markdown",
+      "title":  "Markdown",
+      "level":  "6"
     }
   },
 

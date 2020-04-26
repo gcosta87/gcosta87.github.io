@@ -95,7 +95,6 @@ function fillBioFields(bio) {
     fillTitleField($sectionBio,'.last_update','Ultima actualización '+bio.last_update)
 
     // Load the links
-    console.log(bio.links)
     fillBioLink('a.mail','mailto:'+ bio.links.mail.replace('[AT]','@'));
     fillBioLink('a.telegram','https://t.me/'+ bio.links.telegram_username);
 
@@ -109,7 +108,6 @@ function fillBioFields(bio) {
 
     if(bio.links.enable_cv){
         //enable the link
-
         var $cv_link =  $('a.cv');
         $cv_link.prop('href','download/cv.pdf');
         $cv_link.toggleClass('fill_field');
