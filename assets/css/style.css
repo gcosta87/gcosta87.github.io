@@ -1,5 +1,12 @@
 /* global */
 @import url('https://fonts.googleapis.com/css?family=Noto+Sans&display=swap');
+html{
+    box-shadow: inset 0 0 8rem rgba(0, 0, 0, .5); /* alternariva clara inset 0 0 8rem rgba(200, 200, 205, .5) */
+    background-color: #303030;	/* alternariva clara #F0F0F5 */
+    height: auto;
+    font-family: 'Noto Sans', sans-serif;
+    color: #8A8C90;
+}
 
 .grid-2{
     display: grid;
@@ -9,14 +16,10 @@
 body{
     margin: 0;
     padding: 0;
-    font-family: 'Noto Sans', sans-serif;
-    box-shadow: inset 0 0 8rem rgba(0, 0, 0, .6);
-    background-color: #202226;
-    color: #8A8C90;
-
 }
+
 main{
-    height: 94vh;
+    min-height: 94vh;
     align-items: center;
     display: flex;
     justify-content: center;
@@ -121,7 +124,6 @@ body.mode_profile #under_construction_section{
 
 .section-1 .description{
     color: #ccc;
-    font-size: 1em;
 }
 
 .section-1 .brief{
@@ -136,8 +138,7 @@ body.mode_profile #under_construction_section{
     margin-top: 1em;
 }
 .section-1 h2{
-    font-size: 1.6rem;
-    margin-bottom: 0px;
+    margin-bottom: 4px;
 }
 
 .section-1 a{
@@ -150,6 +151,7 @@ body.mode_profile #under_construction_section{
     border-radius: 50%;
     filter: grayscale(40%);
     transition: filter 1s;
+    margin-left:0.6em;
 }
 
 .section-1 #image_me:hover{
@@ -179,11 +181,11 @@ body.mode_profile #under_construction_section{
 Skills levels
 */
 .section-2 .skills{
- padding: 0.8em;
+    padding: 0.4em;
 }
 .section-2 .skills i{
     color: white;
-    margin: 0.6em;
+    margin: 0.35em;
 }
 
 .section-2 .skills i.skill_level_1,.section-2 .skills i.skill_level_2 {
@@ -191,19 +193,19 @@ Skills levels
 }
 
 .section-2 .skills i.skill_level_3, .section-2 .skills i.skill_level_4{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
 }
 
 .section-2 .skills i.skill_level_5,.section-2 .skills i.skill_level_6 {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
 }
 
 .section-2 .skills i.skill_level_7,.section-2 .skills i.skill_level_8 {
-    font-size: 3rem;
+    font-size: 2.7rem;
 }
 
 .section-2 .skills i.skill_level_9,.section-2 .skills i.skill_level_10 {
-    font-size: 3.6rem;
+    font-size: 3.2rem;
 }
 
 .section-2 a{
@@ -234,6 +236,8 @@ Skills levels
 @media(max-width:780px){
     main{
         height: auto;
+        margin-left:1vh;
+        margin-right: 1vh;
     }
     .grid-2{
         grid-template-columns: 1fr;
@@ -242,9 +246,9 @@ Skills levels
         padding:0;
         padding-top: 5rem;
     }
+
     .section-2{
-        padding: 0;
-        padding-left: 1.5rem;
-        padding-top: 2rem;
+        padding: 2rem 1.5rem;
+        width: auto;
     }
 }
