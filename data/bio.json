@@ -3,8 +3,8 @@
   "last_name":"Costa",
   "birthday": "1987-01-14",
 
-  "brief":       "programador, simple y humano",
-  "description":  "Soy una persona simple. Disfruto de la música. Toco un poco el legüero. Me gusta ser entusiasta y desestructurado. No uso mucho las redes sociales. Amo a mi país \uD83C\uDDE6\uD83C\uDDF7.",
+  "brief":       "desarrollador, simple y humano",
+  "description":  "Soy una persona simple. Disfruto de la música y la familia. Toco un poco el legüero. Me gusta ser entusiasta y desestructurado. No uso mucho las redes sociales. Amo a mi país \uD83C\uDDE6\uD83C\uDDF7.",
 
   "country_flag_url": "assets/images/flag.svg",
   "location":         "La Plata, Argentina",
@@ -15,10 +15,10 @@
         "website":"https://www.freelogic.com.ar",
         "logo":   "https://www.freelogic.com.ar/images/freelogic_icon.png"
       },
-    "role": "programador / qa"
+    "role": "desarrollador / coordinador"
   },
 
-  "last_update": "26/04/2020",
+  "last_update": "27/06/2025",
 
   "links": {
     "mail":            "gcosta[AT]freelogic.com.ar",
